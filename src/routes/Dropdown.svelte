@@ -18,7 +18,7 @@
     font-size: 3em;
     background-color: white;
     width: 100%;
-    max-height: 300px;
+    height: 100%;
     box-sizing: border-box;
     padding: 16px;
     z-index: 1;

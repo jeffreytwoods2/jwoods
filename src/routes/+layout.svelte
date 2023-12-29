@@ -5,6 +5,9 @@
   import { onMount } from "svelte";
   import "./styles.css";
 
+  /**
+	 * @type {boolean}
+	 */
   let menuIsOpen;
 
   onMount(() => {
