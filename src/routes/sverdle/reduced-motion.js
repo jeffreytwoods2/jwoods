@@ -10,9 +10,6 @@ const get_initial_motion_preference = () => {
 
 export const reduced_motion = readable(get_initial_motion_preference(), (set) => {
 	if (browser) {
-		/**
-		 * @param {MediaQueryListEvent} event
-		 */
 		const set_reduced_motion = (event) => {
 			set(event.matches);
 		};
