@@ -5,7 +5,7 @@
 <div id="dropdown-menu" transition:slide>
   <a href="/" id="about-link">About</a>
   <hr class="menu-hr" />
-  <a href="projects.html" id="projects-link">Projects</a>
+  <a href="/projects" id="projects-link">Projects</a>
   <hr class="menu-hr" />
   <a href="blog.html" id="blog-link">Blog</a>
 </div>

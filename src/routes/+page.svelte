@@ -11,7 +11,7 @@
 	<meta property="og:description" content="Personal portfolio site for Jeffrey Woods." />
 </svelte:head>
 
-<section>
+<section id="about">
 	<img src={face} width="800" alt="Face shot of Jeffrey Woods" id="face" />
 	<p id="full-name">
 		Jeffrey <span style="color: blue">Woods</span>
@@ -74,6 +74,10 @@
 </section>
 
 <style>
+	#about {
+		padding-inline: 20px;
+	}
+	
 	#face {
 		display: block;
 		margin: auto;
