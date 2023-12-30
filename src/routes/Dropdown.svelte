@@ -7,7 +7,7 @@
   <hr class="menu-hr" />
   <a href="/projects" id="projects-link">Projects</a>
   <hr class="menu-hr" />
-  <a href="blog.html" id="blog-link">Blog</a>
+  <a href="/blog" id="blog-link">Blog</a>
 </div>
 
 <style>

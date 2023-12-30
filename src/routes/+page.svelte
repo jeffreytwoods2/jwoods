@@ -70,14 +70,14 @@
 			</p>
 		</div>
 	</section>
-  <hr />
+	<hr />
 </section>
 
 <style>
 	#about {
 		padding-inline: 20px;
 	}
-	
+
 	#face {
 		display: block;
 		margin: auto;
@@ -102,9 +102,9 @@
 		text-align: justify;
 	}
 
-  hr {
-    border: solid 1px lightgray;
-  }
+	hr {
+		border: solid 1px lightgray;
+	}
 
 	#roles {
 		display: grid;
