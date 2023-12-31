@@ -1,8 +1,17 @@
 <script>
     import PostPreview from './PostPreview.svelte';
+	import handsome from "$lib/images/hs.webp";
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
+
+<svelte:head>
+	<title>Jeffrey Woods - Blog</title>
+	<meta property="og:title" content="Jeffrey's Blog" />
+	<meta property="og:url" content="https://jwoods.dev/blog" />
+	<meta property="og:image" content={handsome} />
+	<meta property="og:description" content="Blog on personal portfolio site for Jeffrey Woods." />
+</svelte:head>
 
 <section id="page-header">
 	<h2 style="margin: 0; margin-top: 10px">Blog</h2>

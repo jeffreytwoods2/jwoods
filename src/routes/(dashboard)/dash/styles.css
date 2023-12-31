@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: 'Minecraft';
+	src: url('/fonts/minecraft.woff');
+}
+
+html {
+	overflow: scroll;
+	overscroll-behavior: none;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+    font-family: 'Roboto-Regular', serif;
+	background-color: #F3F3F3;
+}
+
+.mc-font {
+    font-family: 'Minecraft', serif;
+}
