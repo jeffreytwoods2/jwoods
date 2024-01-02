@@ -1,5 +1,8 @@
 <script>
-	export let player;
+	/**
+	 * @type {{ World: string; name: string; posX: string; posY: string; posZ: string; }}
+	 */
+	 export let player;
 	let world = '';
 	$: switch (player.World) {
 		case 'world':

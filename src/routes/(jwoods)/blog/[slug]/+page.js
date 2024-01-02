@@ -12,19 +12,20 @@ export const prerender = true;
  * Pretends to get a blog post from a database
  * @param {String} slug The key used to look up the article
  */
+
 function getPostFromDb(slug) {
     let articles = [
         {
             title: 'Learning to Code Offline', 
             subtitle: 'The web is a dangerous place for coding newbies; try starting out with a book.',
             updated: 'Dec 28, 2023',
-            content: ''
+            slug: ''
         },
         {
             title: 'Why Play With the Old Stuff?', 
             subtitle: 'Learning jQuery will show you how we got to React - and where we\'re headed next.',
             updated: 'Dec 27, 2023',
-            content: ''
+            slug: ''
         }
     ]
 
@@ -35,8 +36,6 @@ function getPostFromDb(slug) {
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
     const post = await getPostFromDb(params.slug)
-    const content = await import(`../${params.slug}.js`)
-    post.content = content.default
+    post.slug = params.slug
     return post
-    // error(404, 'Not found');
 }
