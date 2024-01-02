@@ -9,8 +9,6 @@
 }
 
 html {
-	overflow: scroll;
-	overscroll-behavior: none;
 	height: 100%;
 }
 
@@ -19,7 +17,8 @@ body {
 	padding: 0;
 	height: 100%;
     font-family: 'Roboto-Regular', serif;
-	background-color: #F3F3F3;
+	background-image: url('/src/lib/images/dirt.webp');
+	background-size: cover;
 }
 
 .mc-font {

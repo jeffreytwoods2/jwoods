@@ -1,7 +1,16 @@
 <script>
     import Header from "./Header.svelte";
+    import favicon from "$lib/favicons/dash/favicon.ico";
+    import appleIcon from "$lib/favicons/dash/apple-touch-icon.png";
     import "./styles.css";
 </script>
+
+<svelte:head>
+	<link rel="icon" href={favicon} type="image/x-icon" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="jwoods.dev" />
+	<link rel="apple-touch-icon" href={appleIcon} />
+</svelte:head>
 
 <div id="app">
     <Header />
@@ -13,6 +22,8 @@
 <style>
     #app {
         min-height: 100%;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
     }
 
     main {

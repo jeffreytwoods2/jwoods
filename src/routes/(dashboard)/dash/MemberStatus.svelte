@@ -1,46 +1,84 @@
-<div id="online">
-	<div class="online-player">
-        <hr />
-		<p id="player-name" class="mc-font">Brobrohibro</p>
-        <p class="mc-font">Overworld (4024, 128, 3002)</p>
+<script>
+	export let player;
+	let world = '';
+	$: switch (player.World) {
+		case 'world':
+			world = 'Overworld';
+			break;
+		case 'world_nether':
+			world = 'Nether';
+			break;
+		case 'world_the_end':
+			world = 'The End';
+			break;
+	}
+</script>
+
+<div class="online-player">
+	<div id="name-block">
+		<span><i class="fa-solid fa-circle" /></span>
+		<p id="player-name" class="mc-font">{player.name}</p>
 	</div>
-	<div class="online-player">
-        <hr />
+	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
+</div>
+<div class="online-player">
+	<div id="name-block">
+		<span><i class="fa-solid fa-circle" /></span>
 		<p id="player-name" class="mc-font">.TheBigDal6</p>
-        <p class="mc-font">Nether (300, 24, -455)</p>
 	</div>
-	<div class="online-player">
-        <hr />
-		<p id="player-name" class="mc-font">TheQuestForChex</p>
-        <p class="mc-font">End (-64, 18, 10005)</p>
+	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
+</div>
+<div class="online-player">
+	<div id="name-block">
+		<span><i class="fa-solid fa-circle" /></span>
+		<p id="player-name" class="mc-font">Brobrohibro</p>
 	</div>
+	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
+</div>
+<div class="online-player">
+	<div id="name-block">
+		<span><i class="fa-solid fa-circle" /></span>
+		<p id="player-name" class="mc-font">Jarofomo</p>
+	</div>
+	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
 </div>
 
 <style>
-	#online {
-		display: grid;
-		gap: 10px;
-	}
 	.online-player {
 		display: grid;
 		text-align: center;
+		border-radius: 4px;
 	}
 
-    hr {
-        width: 100%;
-        border: solid 1px lightgray;
-    }
+	#name-block {
+		display: flex;
+		column-gap: 4px;
+		align-items: center;
+		margin: auto;
+	}
 
 	p {
 		display: grid;
 		place-items: center;
-        margin: 5px;
-        font-size: 1.1em;
+		margin: 5px;
+		font-size: 1.1em;
 	}
 
 	#player-name {
-        font-size: 1.5em;
-		/* color: #ffff55; */
-		/* text-shadow: 2px 2px 4px #000000; */
+		font-size: 1.5em;
+		display: inline-block;
+		color: #ffff55;
+		text-shadow: 2px 2px 4px #000000;
+	}
+
+	i {
+		color: lawngreen;
+		font-size: 8pt;
+		text-shadow: 2px 2px 4px #000000;
+	}
+
+	#location {
+		color: white;
+		text-shadow: 2px 2px 4px #000000;
 	}
 </style>

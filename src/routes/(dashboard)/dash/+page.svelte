@@ -1,8 +1,27 @@
 <script>
 	import smile from '$lib/images/smile.jpeg';
 	import MemberStatus from './MemberStatus.svelte';
-	/** @type {import('./$types').PageData} */
-	export let data;
+	import { onMount } from 'svelte';
+
+	/** @type any[] */
+	$: onlinePlayerStats = [];
+
+	onMount(() => {
+		async function getOnlinePlayers() {
+			const res = await fetch(`/api/players/online`);
+			const players = await res.json();
+			let newArray = [];
+			for (let player of players.online) {
+				const response = await fetch(`/api/players/${player}`);
+				const onlinePlayer = await response.json();
+				newArray.push(onlinePlayer);
+			}
+			onlinePlayerStats = newArray;
+			setTimeout(getOnlinePlayers, 5000);
+		}
+
+		getOnlinePlayers();
+	});
 </script>
 
 <svelte:head>
@@ -14,24 +33,52 @@
 </svelte:head>
 
 <div class="metric">
-	<p class="mc-font metric-title">Offline</p>
-	<!-- <MemberStatus /> -->
-    {#each data.offline as player}
-        <p>{player}</p>
-    {/each}
+	<div class="mc-font metric-title-box">
+		<p class="metric-title">Online</p>
+	</div>
+	<div class="metric-content-box">
+		<div class="metric-content">
+			{#if onlinePlayerStats.length > 0}
+				{#each onlinePlayerStats as player}
+					<MemberStatus {player} />
+				{/each}
+			{:else}
+				<p id="no-one">No players online</p>
+			{/if}
+		</div>
+	</div>
 </div>
 
 <style>
 	.metric {
-		border: solid 1px black;
+		/* border: solid 1px black; */
 		border-radius: 10px;
-		padding: 20px;
-		background-color: white;
+		overflow: hidden;
+		display: grid;
+		background-image: url('/src/lib/images/stone.png');
+		box-shadow: 4px 4px 3px;
 	}
 
 	.metric-title {
 		font-size: 2em;
 		text-align: center;
-		margin: 0 0 10px;
+		margin: 0;
+		padding: 10px;
+		color: white;
+		text-shadow: 2px 2px 4px #000000;
+		/* backdrop-filter: blur(8px); */
+	}
+	.metric-content {
+		display: grid;
+		gap: 10px;
+		margin-bottom: 10px;
+	}
+
+	#no-one {
+		color: white;
+		text-align: center;
+		margin: 15px 0 0;
+		font-size: x-large;
+		text-shadow: 2px 2px 4px #000000;
 	}
 </style>
