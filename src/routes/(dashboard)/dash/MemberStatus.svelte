@@ -24,27 +24,6 @@
 	</div>
 	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
 </div>
-<div class="online-player">
-	<div id="name-block">
-		<span><i class="fa-solid fa-circle" /></span>
-		<p id="player-name" class="mc-font">.TheBigDal6</p>
-	</div>
-	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
-</div>
-<div class="online-player">
-	<div id="name-block">
-		<span><i class="fa-solid fa-circle" /></span>
-		<p id="player-name" class="mc-font">Brobrohibro</p>
-	</div>
-	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
-</div>
-<div class="online-player">
-	<div id="name-block">
-		<span><i class="fa-solid fa-circle" /></span>
-		<p id="player-name" class="mc-font">Jarofomo</p>
-	</div>
-	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
-</div>
 
 <style>
 	.online-player {
