@@ -51,10 +51,9 @@
 
 <style>
 	.metric {
-		/* border: solid 1px black; */
+		display: flex;
+		flex-direction: column;
 		border-radius: 10px;
-		overflow: hidden;
-		display: grid;
 		background-image: url('/src/lib/images/stone.png');
 		box-shadow: 4px 4px 3px;
 	}
@@ -66,7 +65,6 @@
 		padding: 10px;
 		color: white;
 		text-shadow: 2px 2px 4px #000000;
-		/* backdrop-filter: blur(8px); */
 	}
 	.metric-content {
 		display: grid;

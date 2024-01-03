@@ -1,12 +1,10 @@
 <script>
-	import Logo from './Logo.svelte';
 	import omen from '$lib/images/omen.webp';
 </script>
 
 <header>
 	<div id="header-content">
-		<!-- <Logo /> -->
-		<img src={omen} alt="Logo" />
+		<a href="/dash"><img src={omen} alt="Logo" /></a>
 		<p class="mc-font">Real Ones Only</p>
 		<i id="hamburger" class="fa-solid fa-bars" />
 	</div>
@@ -19,12 +17,18 @@
 		background-image: url('/src/lib/images/grass.jpeg');
 		background-size: cover;
 		box-shadow: 0 1px 3px black;
+		z-index: 1;
 	}
 
 	#header-content {
 		display: flex;
 		text-shadow: 2px 2px 4px #000000;
-		/* backdrop-filter: blur(8px); */
+		padding-top: env(safe-area-inset-top);
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
 	}
 
 	img {
@@ -38,7 +42,7 @@
 		display: grid;
 		place-items: center;
 		flex-grow: 1;
-		font-size: 1.6em;
+		font-size: 2em;
 		color: #ffff55;
 	}
 
