@@ -10,6 +10,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="jwoods.dev" />
 	<link rel="apple-touch-icon" href={appleIcon} />
+    <link rel="manifest" href="/manifest.webmanifest" type="application/manifest+json">
 </svelte:head>
 
 <div id="app">
