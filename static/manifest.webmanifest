@@ -1,7 +1,7 @@
 {
   "short_name": "Real Ones",
   "name": "Real Ones MC Server",
-  "start_url": "https://jwoods.dev/dash",
+  "start_url": "/dash",
   "icons": [
     {
       "src": "/icons/favicon.ico",
@@ -32,7 +32,7 @@
   ],
   "background_color": "#4A6F28",
   "display": "standalone",
-  "scope": "/",
+  "scope": ".",
   "theme_color": "#4A6F28",
   "description": "Dashboard for members of the Real Ones Minecraft server"
 }
