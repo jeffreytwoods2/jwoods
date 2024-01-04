@@ -1,6 +1,6 @@
 <script>
-    import PostPreview from './PostPreview.svelte';
-	import handsome from "$lib/images/hs.webp";
+	import PostPreview from './PostPreview.svelte';
+	import handsome from '$lib/images/hs.webp';
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
@@ -35,10 +35,11 @@
 		<i class="fa-solid fa-comments" />
 	</span>
 </section>
+
 <section id="posts">
-    {#each data.articles as article}
-        <PostPreview article={article}/>
-    {/each}
+	{#each data.articles as article}
+		<PostPreview {article} />
+	{/each}
 </section>
 
 <style>

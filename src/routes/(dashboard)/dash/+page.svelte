@@ -2,9 +2,12 @@
 	import smile from '$lib/images/smile.jpeg';
 	import MemberStatus from './MemberStatus.svelte';
 	import { onMount } from 'svelte';
-
+	
+	/** @type {import('./$types').PageServerData} */
+	export let data;
+	
 	/** @type any[] */
-	$: onlinePlayerStats = [];
+	$: onlinePlayerStats = data.players;
 
 	onMount(() => {
 		async function getOnlinePlayers() {

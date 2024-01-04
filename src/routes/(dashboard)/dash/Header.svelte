@@ -4,7 +4,7 @@
 
 <header>
 	<div id="header-content">
-		<a href="/dash"><img src={omen} alt="Logo" /></a>
+		<a href="/dash"><img src={omen} width="180" height="180" alt="Logo" id="logo" /></a>
 		<p class="mc-font">Real Ones Only</p>
 		<i id="hamburger" class="fa-solid fa-bars" />
 	</div>
@@ -31,9 +31,10 @@
 		text-decoration: none;
 	}
 
-	img {
+	#logo {
 		box-sizing: border-box;
 		max-width: 60px;
+		height: auto;
 		padding: 5px;
 	}
 

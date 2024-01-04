@@ -1,14 +1,14 @@
 @font-face {
     font-family: "Roboto-Regular";
-    src: url("/fonts/Roboto/Roboto-Regular.ttf");
+    src: url("/src/lib/fonts/Roboto/Roboto-Regular.ttf");
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Minecraft';
-	src: url('/fonts/minecraft.woff');
+	src: url('/src/lib/fonts/minecraft.woff');
+	font-display: swap;
 }
-
-
 
 html, body {
 	margin: 0;
