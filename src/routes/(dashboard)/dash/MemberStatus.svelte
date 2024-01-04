@@ -54,12 +54,6 @@
 		text-shadow: 2px 2px 4px #000000;
 	}
 
-	i {
-		color: #7cfc00;
-		font-size: 8pt;
-		text-shadow: 2px 2px 4px #000000;
-	}
-
 	#indicator-wrapper {
 		vertical-align: middle;
 	}
