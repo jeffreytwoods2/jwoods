@@ -1,9 +1,4 @@
 @font-face {
-    font-family: "Roboto-Regular";
-    src: url("/src/lib/fonts/Roboto/Roboto-Regular.ttf");
-}
-
-@font-face {
 	font-family: 'Minecraft';
 	src: url('/src/lib/fonts/minecraft.woff');
 }
@@ -18,7 +13,7 @@ html, body {
 
 body {
 	height: 100vh;
-    font-family: 'Roboto-Regular', serif;
+	background-color: #926C4D;
 	background-image: url('/src/lib/images/dirt.webp');
 	background-size: cover;
 	background-attachment: fixed;

@@ -57,6 +57,7 @@
 		display: flex;
 		flex-direction: column;
 		border-radius: 10px;
+		background-color: #8B8B8B;
 		background-image: url('/src/lib/images/stone.png');
 		box-shadow: 4px 4px 3px;
 	}

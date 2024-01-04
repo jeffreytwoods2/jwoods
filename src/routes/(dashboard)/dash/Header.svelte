@@ -15,6 +15,7 @@
 	header {
 		border-bottom: solid 1px black;
 		width: 100%;
+		background-color: #5B8B32;
 		background-image: url('/src/lib/images/grass.jpeg');
 		background-size: cover;
 		box-shadow: 0 1px 3px black;
