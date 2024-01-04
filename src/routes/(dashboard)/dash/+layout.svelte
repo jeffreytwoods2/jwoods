@@ -10,6 +10,8 @@
 	<link rel="icon" href={favicon} type="image/x-icon" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="jwoods.dev" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Real Ones MC Server" />
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
