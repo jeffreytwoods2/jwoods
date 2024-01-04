@@ -1,12 +1,13 @@
 <script>
 	import omen from '$lib/images/omen.webp';
+	import bars from "$lib/images/bars-solid.svg";
 </script>
 
 <header>
 	<div id="header-content">
 		<a href="/dash"><img src={omen} width="180" height="180" alt="Logo" id="logo" /></a>
 		<p class="mc-font">Real Ones Only</p>
-		<i id="hamburger" class="fa-solid fa-bars" />
+		<img src={bars} alt="Menu button" height="16" width="14" id="menu" />
 	</div>
 </header>
 
@@ -49,11 +50,13 @@
 		text-align: center;
 	}
 
-	i {
-		display: grid;
-		place-items: center;
-		font-size: 2em;
-		color: #efefef;
+	#menu {
 		width: 60px;
+		height: 60px;
+		color: #efefef;
+		padding-inline: 16px;
+		padding-block: 14px;
+		box-sizing: border-box;
+		filter: drop-shadow(2px 2px 2px #000000);
 	}
 </style>

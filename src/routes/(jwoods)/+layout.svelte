@@ -30,6 +30,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="jwoods.dev" />
 	<link rel="apple-touch-icon" href={appleIcon} />
+	<script src="https://kit.fontawesome.com/590500020a.js" crossorigin="anonymous" defer></script>
 </svelte:head>
 
 <div id="app">
