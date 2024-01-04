@@ -4,7 +4,6 @@
 	import Dropdown from './Dropdown.svelte';
 	import favicon from '$lib/favicons/jwoods/favicon.ico';
 	import appleIcon from '$lib/favicons/jwoods/apple-touch-icon.png';
-	import roboto from '$lib/fonts/Roboto/Roboto-Regular.ttf';
 	import { onMount } from 'svelte';
 	import './styles.css';
 
@@ -27,7 +26,6 @@
 
 <svelte:head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="preload" href={roboto} as="font" type="font/ttf" crossorigin="">
 	<link rel="icon" href={favicon} type="image/x-icon" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="jwoods.dev" />

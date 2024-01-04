@@ -46,6 +46,7 @@
 		flex-grow: 1;
 		font-size: 2em;
 		color: #ffff55;
+		text-align: center;
 	}
 
 	i {
