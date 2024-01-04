@@ -14,8 +14,6 @@
 	<link rel="apple-touch-icon" href={appleIcon} />
     <link rel="manifest" href="/manifest.webmanifest" type="application/manifest+json">
     <meta name="viewport" content="initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <Splash />
 </svelte:head>
 
