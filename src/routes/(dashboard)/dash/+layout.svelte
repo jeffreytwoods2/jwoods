@@ -2,13 +2,11 @@
     import Header from "./Header.svelte";
     import favicon from "$lib/favicons/dash/favicon.ico";
     import appleIcon from "$lib/favicons/dash/apple-touch-icon.png";
-    import minecraft from "$lib/fonts/minecraft.woff";
     import Splash from "./Splash.svelte";
     import "./styles.css";
 </script>
 
 <svelte:head>
-    <link rel="preload" href={minecraft} as="font" type="font/woff" crossorigin="">
 	<link rel="icon" href={favicon} type="image/x-icon" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="jwoods.dev" />
