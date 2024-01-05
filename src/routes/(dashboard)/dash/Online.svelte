@@ -21,9 +21,9 @@
 <div class="online-player">
 	<div id="name-block">
 		<span id="indicator-wrapper"><img src={circle} alt="Green status indicator" width="16" height="16" id="indicator" /></span>
-		<p id="player-name" class="mc-font">{player.name}</p>
+		<p id="player-name" class="">{player.name}</p>
 	</div>
-	<p class="mc-font" id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
+	<p id="location">{world} ({player.posX}, {player.posY}, {player.posZ})</p>
 </div>
 
 <style>

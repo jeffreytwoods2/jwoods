@@ -1,29 +1,35 @@
 <script>
 	import smile from '$lib/images/smile.jpeg';
-	import MemberStatus from './MemberStatus.svelte';
+	import Online from './Online.svelte';
 	import { onMount } from 'svelte';
-	
-	/** @type {import('./$types').PageServerData} */
+
+	/** @type {import('./$types').PageData} */
 	export let data;
-	
+
 	/** @type any[] */
-	$: onlinePlayerStats = data.players;
+	$: onlinePlayers = data.online.players
+	$: onlineError = false
 
 	onMount(() => {
-		async function getOnlinePlayers() {
-			const res = await fetch(`/api/players/online`);
-			const players = await res.json();
-			let newArray = [];
-			for (let player of players.online) {
-				const response = await fetch(`/api/players/${player}`);
-				const onlinePlayer = await response.json();
-				newArray.push(onlinePlayer);
+		async function refreshData() {
+			// Fetch data for Online props
+			try {
+				await fetch(`/api/players/online`).then(async (res) => {
+					if (res.status !== 200) {
+						throw "Error retrieving players, moving on"
+					}
+					onlinePlayers = await res.json()
+					onlineError = false
+				});
+			} catch (err) {
+				console.log(err);
+				onlineError = true;
 			}
-			onlinePlayerStats = newArray;
-			setTimeout(getOnlinePlayers, 5000);
+			
+			setTimeout(refreshData, 3000);
 		}
 
-		getOnlinePlayers();
+		refreshData();
 	});
 </script>
 
@@ -36,17 +42,21 @@
 </svelte:head>
 
 <div class="metric">
-	<div class="mc-font metric-title-box">
+	<div class=" metric-title-box">
 		<p class="metric-title">Online</p>
 	</div>
 	<div class="metric-content-box">
 		<div class="metric-content">
-			{#if onlinePlayerStats.length > 0}
-				{#each onlinePlayerStats as player}
-					<MemberStatus {player} />
-				{/each}
+			{#if onlineError}
+				<p id="no-one">Error getting players</p>
 			{:else}
-				<p id="no-one">No players online</p>
+				{#if onlinePlayers.length > 0}
+					{#each onlinePlayers as player}
+						<Online {player} />
+					{/each}
+				{:else}
+					<p id="no-one">No players online</p>
+				{/if}
 			{/if}
 		</div>
 	</div>
@@ -57,7 +67,7 @@
 		display: flex;
 		flex-direction: column;
 		border-radius: 10px;
-		background-color: #8B8B8B;
+		background-color: #8b8b8b;
 		background-image: url('/src/lib/images/stone.png');
 		box-shadow: 4px 4px 3px;
 	}

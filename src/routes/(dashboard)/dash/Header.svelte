@@ -6,7 +6,7 @@
 <header>
 	<div id="header-content">
 		<a href="/dash"><img src={omen} width="180" height="180" alt="Logo" id="logo" /></a>
-		<p class="mc-font">Real Ones Only</p>
+		<p class="">Real Ones Only</p>
 		<img src={bars} alt="Menu button" height="16" width="14" id="menu" />
 	</div>
 </header>

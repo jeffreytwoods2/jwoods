@@ -17,8 +17,5 @@ body {
 	background-image: url('/src/lib/images/dirt.webp');
 	background-size: cover;
 	background-attachment: fixed;
-}
-
-.mc-font {
-    font-family: 'Minecraft', serif;
+	font-family: 'Minecraft', serif;
 }
