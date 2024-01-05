@@ -41,7 +41,7 @@
     main {
         display: flex;
         flex-direction: column;
-        overflow: scroll;
+        overflow-y: scroll;
         gap: 20px;
         padding: 20px;
         flex-grow: 1;

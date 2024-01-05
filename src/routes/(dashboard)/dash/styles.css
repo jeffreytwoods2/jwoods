@@ -8,11 +8,11 @@ html, body {
 	padding: 0;
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
 	overscroll-behavior: none;
 }
 
 body {
-	height: 100vh;
 	background-color: #926C4D;
 	background-image: url('/src/lib/images/dirt.webp');
 	background-size: cover;
