@@ -1,5 +1,6 @@
 <script>
 	import smile from '$lib/images/smile.jpeg';
+	import map from '$lib/images/map.webp';
 	import Online from './Online.svelte';
 	import { onMount } from 'svelte';
 
@@ -7,8 +8,8 @@
 	export let data;
 
 	/** @type any[] */
-	$: onlinePlayers = data.online.players
-	$: onlineError = false
+	$: onlinePlayers = data.online.players;
+	$: onlineError = false;
 
 	onMount(() => {
 		async function refreshData() {
@@ -16,16 +17,16 @@
 			try {
 				await fetch(`/api/players/online`).then(async (res) => {
 					if (res.status !== 200) {
-						throw "Error retrieving players, moving on"
+						throw 'Error retrieving players, moving on';
 					}
-					onlinePlayers = await res.json()
-					onlineError = false
+					onlinePlayers = await res.json();
+					onlineError = false;
 				});
 			} catch (err) {
 				console.log(err);
 				onlineError = true;
 			}
-			
+
 			setTimeout(refreshData, 3000);
 		}
 
@@ -46,20 +47,27 @@
 		<p class="metric-title">Online</p>
 	</div>
 	<div class="metric-content-box">
-		<div class="metric-content">
+		<div id="online-content">
 			{#if onlineError}
 				<p id="no-one">Error getting players</p>
+			{:else if onlinePlayers.length > 0}
+				{#each onlinePlayers as player}
+					<Online {player} />
+				{/each}
 			{:else}
-				{#if onlinePlayers.length > 0}
-					{#each onlinePlayers as player}
-						<Online {player} />
-					{/each}
-				{:else}
-					<p id="no-one">No players online</p>
-				{/if}
+				<p id="no-one">No players online</p>
 			{/if}
 		</div>
 	</div>
+</div>
+
+<div class="metric" id="map-metric">
+	<div class=" metric-title-box">
+		<p class="metric-title">Live Map</p>
+	</div>
+	<a href="https://mc.jwoods.dev" class="metric-content-box">
+		<img src={map} width="2424" height="1168" alt="Isometric world map" id="map" />
+	</a>
 </div>
 
 <style>
@@ -80,7 +88,8 @@
 		color: white;
 		text-shadow: 2px 2px 4px #000000;
 	}
-	.metric-content {
+
+	#online-content {
 		display: grid;
 		gap: 10px;
 		margin-bottom: 10px;
@@ -92,5 +101,20 @@
 		margin: 15px 0 0;
 		font-size: x-large;
 		text-shadow: 2px 2px 4px #000000;
+	}
+
+	#map-metric {
+		overflow: hidden;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	#map {
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 </style>
