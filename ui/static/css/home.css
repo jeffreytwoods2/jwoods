@@ -41,7 +41,7 @@ ul {
     padding: 0;
 }
 
-li {
+li a {
     font-family: Nunito-B;
     font-size: 3em;
     display: flex;
