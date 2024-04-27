@@ -1,0 +1,21 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <title>Jeffrey Woods - {{template "title" .}}</title>
+</head>
+<body>
+    <header>
+        <a href="/"><h1 id="title">Jeffrey Woods</h1></a>
+        <p id="subtitle">Software &ndash; 4x4s &ndash; Spanish Linguistics</p>
+    </header>
+    <main>
+        {{template "main" .}}
+    </main>
+    <footer>&copy; {{.CurrentYear}}. I am not the killer from the creepypasta.</footer>
+</body>
+</html>
+{{end}}
