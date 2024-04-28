@@ -22,7 +22,7 @@ func (app *application) homeHandler(w http.ResponseWriter, r *http.Request) {
 func (app *application) projectsHandler(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData()
 	OGTags := map[string]string{
-		"og:title":       "Projects of developer Jeffrey Woods",
+		"og:title":       "Projects - Jeffrey Woods",
 		"og:url":         "https://jwoods.dev/projects",
 		"og:image":       "/static/img/jeep/jeep-og.webp",
 		"og:type":        "website",
