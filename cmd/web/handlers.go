@@ -24,7 +24,7 @@ func (app *application) projectsHandler(w http.ResponseWriter, r *http.Request) 
 	OGTags := map[string]string{
 		"og:title":       "Projects of developer Jeffrey Woods",
 		"og:url":         "https://jwoods.dev/projects",
-		"og:image":       "/static/img/jeep/jeep-800w.avif",
+		"og:image":       "https://jwoods.dev/static/img/jeep/jeep-800w.avif",
 		"og:type":        "website",
 		"og:description": "Projects built by software developer Jeffrey Woods",
 	}
