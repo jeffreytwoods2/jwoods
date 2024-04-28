@@ -10,6 +10,7 @@ import (
 
 type templateData struct {
 	CurrentYear int
+	OGTags      map[string]string
 }
 
 func newTemplateCache() (map[string]*template.Template, error) {

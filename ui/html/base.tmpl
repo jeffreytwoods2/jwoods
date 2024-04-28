@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/home.css">
     <title>Jeffrey Woods - {{template "title" .}}</title>
+    {{range $key, $value := .OGTags}}
+    <meta property={{$key}} content={{$value}}>
+    {{end}}
 </head>
 <body>
     <header>
