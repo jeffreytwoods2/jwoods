@@ -15,9 +15,7 @@
     font-weight: bold;
 }
 
-/*
-DEFAULT - RESPONSIVE XS
-*/
+/* XS (DEFAULT) */
 
 html, body {
     margin: 0;
@@ -29,6 +27,7 @@ body {
     margin: auto;
     padding: 1.5rem;
     font-family: Nunito;
+    overscroll-behavior-y: none;
 }
 
 a {
@@ -111,42 +110,88 @@ hr {
     box-sizing: border-box;
 }
 
-footer {
-    color: #555555;
-    font-size: small;
-    text-align: center;
+#contact-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    width: 100%;
 }
 
-.contact{
-    font-size: 1.5em;
-}
-
-h2.contact {
-    font-family: Nunito-B;
-    margin-block-end: 0.25em;
-}
-
-p.contact {
-    margin-block-start: 0;
-}
-
-#download-header {
-    text-align: center;
-}
-
-#download {
+.contact-button {
     display: block;
-    max-width: 5em;
-    height: auto;
 }
 
 figure {
     display: grid;
     place-items: center;
-    margin-block-end: 2em;
+}
+
+a img {
+    width: 80px;
+    height: auto;
 }
 
 figcaption {
     text-align: center;
     margin-block-start: 0.25em;
+}
+
+.figcap-lg {
+    display: none;
+}
+
+footer {
+    color: #555555;
+    font-size: small;
+    text-align: center;
+    margin-block-start: 2em;
+}
+
+/* MD */
+
+@media screen and (min-width: 510px) {
+    #contact-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-button {
+        height: 7em;
+        width: 7em;
+    }
+
+    figcaption {
+        display: none;
+    }
+
+    .figcap-lg {
+        display: inline;
+        white-space: nowrap;
+        font-size: 1.2em;
+    }
+}
+
+/* LG */
+
+@media screen and (min-width: 726px) {
+    #contact-buttons {
+        display: inline-flex;
+        justify-content: space-around;
+    }
+
+    .figcap-lg {
+        font-size: 1.15em;
+    }
+}
+
+/* XL */
+@media screen and (min-width: 944px) {
+    #contact-buttons {
+        display: inline-flex;
+        justify-content: space-around;
+    }
+
+    .figcap-lg {
+        font-size: 1.5em;
+    }
 }

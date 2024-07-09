@@ -3,13 +3,28 @@
 {{define "main"}}
 <h1 class="heading">Contact</h1>
 <hr />
-<h2 class="contact">Email</h2>
-<p class="contact">jeffreywoods at jwoods.dev</p>
+<div id="contact-buttons">
+    <figure>
+        <a href="mailto:jeffreywoods@jwoods.dev">
+            <img src="/static/img/email.svg" alt="Email icon" width="512" height="512" class="contact-button">
+        </a>
+        <figcaption>Email</figcaption>
+        <figcaption class="figcap-lg">jeffreywoods@jwoods.dev</figcaption>
+    </figure>
+    <figure>
+        <a href="https://www.linkedin.com/in/jeffrey-woods-ii/">
+            <img src="/static/img/linkedin.svg" alt="LinkedIn icon" width="448" height="512" class="contact-button">
+        </a>
+        <figcaption>LinkedIn</figcaption>
+        <figcaption class="figcap-lg">LinkedIn</figcaption>
+    </figure>
+    <figure>
+        <a href="/static/files/woods_jeffrey.pdf" download>
+            <img src="/static/img/dl.svg" alt="Download icon" width="384" height="512" class="contact-button">
+        </a>
+        <figcaption>Resume</figcaption>
+        <figcaption class="figcap-lg">Download Resume</figcaption>
+    </figure>
+</div>
 
-<figure>
-    <a href="/static/files/woods_jeffrey.pdf" download>
-        <img src="/static/img/dl.svg" alt="Download icon" width="384" height="512" id="download">
-    </a>
-    <figcaption>Download Resume</figcaption>
-</figure>
 {{end}}
