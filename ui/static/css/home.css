@@ -110,6 +110,11 @@ hr {
     box-sizing: border-box;
 }
 
+.card-vid {
+    width: 100%;
+    height: auto;
+}
+
 #contact-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
