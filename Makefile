@@ -26,3 +26,4 @@ run/web:
 build/web:
 	@echo 'Building cmd/web...'
 	go build -ldflags="-s -w" -o=./bin/web ./cmd/web
+	sudo systemctl restart jwoods
