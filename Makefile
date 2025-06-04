@@ -15,7 +15,7 @@ help:
 ## run/web: run the cmd/web application
 .PHONY: run/web
 run/web:
-	@go run ./cmd/web -addr=:4000
+	@go run ./cmd/web -addr=:4001
 
 # ==================================================================================== #
 # BUILD
@@ -25,5 +25,5 @@ run/web:
 .PHONY: build/web
 build/web:
 	@echo 'Building cmd/web...'
-	go build -ldflags="-s -w" -o=./bin/web ./cmd/web
-	sudo systemctl restart jwoods
+	@go build -ldflags="-s -w" -o=./bin/web ./cmd/web
+	@sudo systemctl restart jwoods

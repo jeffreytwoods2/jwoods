@@ -9,9 +9,9 @@ import (
 func (app *application) homeHandler(w http.ResponseWriter, r *http.Request) {
 	data := app.newTemplateData()
 	OGTags := map[string]string{
-		"og:title":       "The #1 resource for handsome people",
+		"og:title":       "Home - Jeffrey Woods",
 		"og:url":         "https://jwoods.dev",
-		"og:image":       "/static/img/hs.webp",
+		"og:image":       "/static/img/smile.png",
 		"og:type":        "website",
 		"og:description": "Portfolio website for software developer Jeffrey Woods",
 	}
