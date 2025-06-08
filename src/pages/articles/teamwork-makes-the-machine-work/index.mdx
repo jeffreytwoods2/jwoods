@@ -1,0 +1,51 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import uvSim from './uvsim.png'
+
+export const meta = {
+  author: 'Jeffrey Woods',
+  date: '2025-06-06',
+  title: 'Teamwork makes the machine work',
+  description:
+    'We all have horror stories about group projects at school; here I share a miracle story about a team that worked extremely well.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+During my junior year of college, I took a Software Engineering course where we built a reasonably straightforward yet significant piece of software: a virtual machine that runs an educational assembly language used in high schools and lower-level courses.
+
+<Image src={uvSim} alt="Screenshot of UVSim app" width={600} style={{ margin: '0 auto', borderRadius: '0' }} />
+
+The VM assignment was a group project, which are notoriously good examples of the 80/20 rule (and notoriously accurate predictions for later group work in one's career). I decided to do everything I could to make the teamwork fair and enjoyable, and to my complete surprise, our teamwork ended up being fair and enjoyable.
+
+## Build Details
+
+We built the VM in Python, using its vast array of available libraries 
+for features we needed such as multithreading and a GUI. The machine reads 
+an assembly-like bytecode called BasicML that represents what a simplified, 
+academic assembly language might look like for high school courses.
+
+Users can load existing programs, write new ones directly in the app, and 
+save the current program to their local machine as a new file. The VM supports 
+the older 4-digit word size for BasicML as well as the modern 6-digit word 
+size (yes, the native word size is measured in digits, not bytes).
+
+## Dreamwork
+
+From the very beginning, I participated enthusiastically in every team meeting 
+and always came prepared when I was acting as Team Lead. I hoped the optimism 
+would be contagious and would help frame this group project as something exciting 
+that we would enjoy building together. I won't pretend that this was the only or 
+even main reason why, but spirits were generally high throughout the semester 
+and we had plenty of fun each week when we got together.
+
+I kept teammates accountable for their contributions, and they in turn kept me 
+accountable as well. I figured that frequent check-ins would prevent any dire 
+procrastination and the peer pressure would help us do our best work. At the end 
+of each sprint, we would show off the feature we had built, and the positivity and 
+encouragement that followed was infectious. It relieved a lot of pressure knowing 
+that the team was there to celebrate each member's wins.
+
+## How can I replicate this in my own workplace?
+
+Not a damn clue.

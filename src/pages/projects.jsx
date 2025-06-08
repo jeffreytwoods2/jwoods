@@ -12,21 +12,21 @@ const projects = [
     name: 'Ask Wilson',
     description:
       'An AI-powered tutor that helps UVU students nail their coursework at any time of day. Engineered to give help but not answers.',
-    link: { href: 'https://uvu.edu', label: 'uvu.edu' },
+    link: { href: 'https://jwoods.dev/articles/building-an-ai-tutor-for-utahs-largest-university', label: 'jwoods.dev' },
     logo: logoAiva,
   },
   {
     name: 'Minecraft Dashboard',
     description:
       'A progressive web app that lets players on my Minecraft server see the whole world and chat with each other privately.',
-    link: { href: 'https://dash.jwoods.dev', label: 'dash.jwoods.dev' },
+    link: { href: 'https://github.com/jeffreytwoods2/dash', label: 'github.com' },
     logo: logoDash,
   },
   {
     name: 'UVSim',
     description:
       'An educational VM emulating a CPU, main memory, and registers to read BasicML bytecode.',
-    link: { href: '#', label: 'github.com' },
+    link: { href: 'https://github.com/jeffreytwoods2/uvsim', label: 'github.com' },
     logo: logoUVSim,
   },
 ]

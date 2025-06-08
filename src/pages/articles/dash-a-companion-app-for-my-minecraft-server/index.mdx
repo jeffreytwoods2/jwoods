@@ -1,0 +1,36 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import dash from './dash.png'
+
+export const meta = {
+  author: 'Jeffrey Woods',
+  date: '2025-06-07',
+  title: 'Dash - A companion app for my Minecraft server',
+  description:
+    'Minecraft can be a fun multiplayer experience, but that doesn\'t mean there isn\'t room for even more social features.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+I host a Minecraft server on an Oracle Ampere VM with 24GB of RAM and 4 Gbps up/down.
+
+<Image src={dash} alt="Screenshot of dash app" width={400} style={{ margin: '0 auto', borderRadius: '0' }} />
+
+## Features
+
+- Live location of all online players
+- Custom library of music, playable through the jukebox
+- An interactive, isometric map of the entire world with live player locations
+
+## Build Details
+
+I made this app with Go, HTMX, and Postgres. I love the simplicity of that 
+design and am constantly impressed with how much one can do with just these 
+tools.
+
+It has several features of progressive web apps, namely that it is installable 
+to your home screen and behaves natively when used standalone. It also has a 
+robust webmanifest and uses service workers to cache static assets; one day I 
+hope to find a good reason to have the service workers help the app behave well 
+offline, but I don't want to build a solution looking for a problem, so the service 
+workers don't do much for now.
