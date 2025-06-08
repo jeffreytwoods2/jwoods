@@ -1,0 +1,6 @@
+<meta property={{$key}} content={{$value}}>
+"og:title":       "Home - Jeffrey Woods",
+"og:url":         "https://jwoods.dev",
+"og:image":       "/static/img/smile.png",
+"og:type":        "website",
+"og:description": "Home page for software developer Jeffrey Woods",

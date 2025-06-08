@@ -221,6 +221,26 @@ export default function Home({ articles }) {
           name="description"
           content="I'm Jeffrey, a software developer based in the Rocky Mountains. I help companies utilize AI to tidy up their data and search their knowledge base using natural language."
         />
+        <meta
+          property="og:title"
+          content="Jeffrey Woods - Software Developer"
+        />
+        <meta
+          property="og:url"
+          content="https://jwoods.dev"
+        />
+        <meta
+          property="og:image"
+          content="/portrait.jpg"
+        />
+        <meta
+          property="og:type"
+          content="website"
+        />
+        <meta
+          property="og:description"
+          content="Home page for software developer Jeffrey Woods"
+        />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
