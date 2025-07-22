@@ -18,6 +18,7 @@ import image5 from '@/images/photos/code.png'
 import logoBreeze from '@/images/logos/breeze.svg'
 import logoArivo from '@/images/logos/arivo.ico'
 import logoUVU from '@/images/logos/uvu.png'
+import logoHPE from '@/images/logos/hpe.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -107,12 +108,22 @@ function SocialLink({ icon: Icon, ...props }) {
 function Resume() {
   let resume = [
     {
+      company: 'Hewlett Packard Enterprise',
+      title: 'Systems SWE',
+      logo: logoHPE,
+      start: '2025',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
       company: 'UVU - DX',
       title: 'Software Developer',
       logo: logoUVU,
       start: '2023',
       end: {
-        label: 'Present',
+        label: '2025',
         dateTime: new Date().getFullYear(),
       },
     },
